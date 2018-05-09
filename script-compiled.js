@@ -53,11 +53,7 @@ class Stopwatch {
 				}
 }
 
-let startButton = document.getElementById('start');
-startButton.addEventListener('click', () => stopwatch.start());
-
-let stopButton = document.getElementById('stop');
-stopButton.addEventListener('click', () => stopwatch.stop());
+const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
 
 function pad0(value) {
 				let result = value.toString();
@@ -66,3 +62,9 @@ function pad0(value) {
 				}
 				return result;
 }
+
+let startButton = document.getElementById('start');
+startButton.addEventListener('click', () => stopwatch.start());
+
+let stopButton = document.getElementById('stop');
+stopButton.addEventListener('click', () => stopwatch.stop());
